@@ -30,3 +30,6 @@ jobs:
 
       - name: Tag Docker image
         run: docker tag nodejs-starter ${{ secrets.DOCKER_USERNAME }}/nodejs-starter:latest
+
+      - name: Push Docker Image
+        run: docker push ${{ secrets.DOCKER_USERNAME }}/nodejs-starter:latest
