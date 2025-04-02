@@ -1,4 +1,4 @@
-name: Node.js CI
+name: Node.js CI with Docker
 on:
   push:
     branches: [ "main" ]
@@ -21,3 +21,6 @@ jobs:
 
       - name: Run app build/test
         run: echo "Node.js app build successful"
+
+      - name: Build Docker image
+        run: docker build -t nodejs-starter .
