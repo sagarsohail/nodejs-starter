@@ -6,7 +6,7 @@ router.get('/', (req, res) => {
   //res.send('Welcome to your Node.js Starter App! - ${process.env.APP_NAME}'); `Hello`
 });
 
-router.get('health', (req, res) => {
-    res.status(200).json({ status: `UP` });
+router.get('/health', (req, res) => {
+    res.json({ status: 'UP' });
   });
 module.exports = router;
