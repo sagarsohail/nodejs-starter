@@ -1,3 +1,4 @@
+const logger = require('../logger'); 
 const express = require('express');
 const router = express.Router();
 
@@ -15,4 +16,10 @@ router.get('/Info', (req, res) => {
 router.get('/health', (req, res) => {
     res.json({ status: 'UP' });
   });
+
+router.get('/logtest', (req, res) => {
+    logger.info('Log test route was hit!');
+    res.send('Logging test completed.');
+  });
 module.exports = router;
+
