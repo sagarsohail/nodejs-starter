@@ -6,6 +6,12 @@ router.get('/', (req, res) => {
   //res.send('Welcome to your Node.js Starter App! - ${process.env.APP_NAME}'); `Hello`
 });
 
+router.get('/Info', (req, res) => {
+    res.send(
+      `${process.env.DEFAULT_MESSAGE} - ${process.env.APP_NAME} (v${process.env.APP_VERSION})`
+    );
+  });
+
 router.get('/health', (req, res) => {
     res.json({ status: 'UP' });
   });
