@@ -18,6 +18,7 @@ router.get('/health', (req, res) => {
   });
 
 router.get('/logtest', (req, res) => {
+    console.log('logger onject:', logger);
     logger.info('Log test route was hit!');
     res.send('Logging test completed.');
   });
