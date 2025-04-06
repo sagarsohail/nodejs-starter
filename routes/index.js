@@ -1,6 +1,6 @@
-const logger = require('../logger').logger; 
 const express = require('express');
 const router = express.Router();
+const logger = require('../logger');
 
 router.get('/', (req, res) => {
   res.json({ message: `Welcome to your Node.js Starter App! - ${process.env.APP_NAME}` });
@@ -17,8 +17,7 @@ router.get('/health', (req, res) => {
     res.json({ status: 'UP' });
   });
 
-router.get('/logtest', (req, res) => {
-    console.log('logger onject:', logger);
+router.get('/logtest', (req, res) => {    
     logger.info('Log test route was hit!');
     res.send('Logging test completed.');
   });
